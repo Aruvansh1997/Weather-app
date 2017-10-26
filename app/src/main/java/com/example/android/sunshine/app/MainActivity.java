@@ -7,8 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.*;
-import android.io.*;
+
 
 import com.example.android.sunshine.app.sync.SunshineSyncAdapter;
 
