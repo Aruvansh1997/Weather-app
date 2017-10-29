@@ -15,7 +15,8 @@ public class MainActivity extends ActionBarActivity implements ForecastFragment.
 
     private final String LOG_TAG = MainActivity.class.getSimpleName();
     private static final String DETAILFRAGMENT_TAG = "DFTAG";
-
+    private boolean flag;
+   
     private boolean mTwoPane;
     private String mLocation;
 
@@ -39,6 +40,7 @@ public class MainActivity extends ActionBarActivity implements ForecastFragment.
                         .commit();
             }
         } else {
+            flag=false;
             mTwoPane = false;
             getSupportActionBar().setElevation(0f);
         }
@@ -62,10 +64,10 @@ public class MainActivity extends ActionBarActivity implements ForecastFragment.
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        int idofitem = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (idofitem == R.id.action_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
